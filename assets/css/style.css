@@ -1,0 +1,713 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --main: #032616;
+  --secondary: #3dcc85;
+  --buttn: #0a6638;
+  /* --border: rgba(0, 0, 0, 0.08); */
+  --shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.233);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f5f3f0 !important;
+  overflow-x: hidden;
+}
+.custom_bg {
+  background-color: var(--main) !important;
+}
+.custom_btn {
+  background-color: var(--buttn) !important;
+}
+.text_color {
+  color: var(--secondary) !important;
+}
+.text_color_primary {
+  color: var(--buttn) !important;
+}
+
+.bg-cover {
+  background-position: center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+.btn_shadow {
+  box-shadow: 0px -1px 10px 0px #0b9557a9;
+}
+.btn-outline-secondary:hover {
+  color: black !important;
+}
+
+.btn:hover {
+  transform: translateY(-8%) !important;
+  transition: 0.3s ease-in-out !important;
+  cursor: pointer !important;
+  box-shadow: 0px -1px 10px 0px #0b9557a9;
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
+}
+.form-check-input[type="radio"] {
+  border-color: rgba(0, 0, 0, 0.244) !important;
+}
+.form-check-input[type="checkbox"] {
+  border-color: rgba(0, 0, 0, 0.244) !important;
+}
+
+.img-margin .card {
+  margin-right: 5px !important;
+}
+/* offcanva sidebar */
+/* .offcanvas-body .nav-item .nav-link {
+  font-size: 2px !important;
+} */
+/* slider container */
+.input-group .input-group-text {
+  color: var(--buttn) !important;
+}
+
+small {
+  margin-top: -5px !important;
+  margin-bottom: 5px;
+}
+
+/* pets categories section
+ */
+
+.pets_icons img {
+  background-color: white;
+  border-radius: 20%;
+  padding: 20px;
+  max-width: 72px;
+  max-height: 72px;
+  /* box-shadow: var(--shadow) !important; */
+}
+.pets_icons img:hover {
+  transform: translateY(-8%) !important;
+  transition: 0.3s ease-in-out !important;
+  cursor: pointer !important;
+}
+.horizontal-scroll {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+/* Cards Section */
+.card_img_container {
+  height: 300px !important; /* Set the desired fixed height */
+  width: 100% !important;
+}
+
+.card_img_container img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Pets Safety Section */
+.text_height h4 {
+  line-height: 1.5;
+}
+
+.card_icon img {
+  width: 60px;
+}
+
+/* need help section */
+.bg_colour {
+  background-color: #fffacc;
+}
+
+.bg_colour h4 {
+  color: #662400 !important;
+}
+.bg_colour p {
+  font-size: 15px !important;
+  color: #662400bf;
+}
+
+.bg_colour a {
+  font-size: 13px !important;
+  font-weight: bold !important;
+}
+
+/* Latest articles section */
+.card-container-articles {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.card-container-articles .card {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust the width as needed */
+  margin-right: 10px; /* Add spacing between cards */
+  margin-bottom: 10px;
+}
+.card_tags {
+  margin-top: -10px !important;
+}
+.card_tags span {
+  font-size: 10px !important;
+  background-color: #ecf3f2;
+  padding-left: 6px;
+  padding-right: 6px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+.card-container-articles .card_tags span {
+  font-size: 10px !important;
+  background-color: #ecf3f2;
+  padding-left: 6px;
+  padding-right: 6px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+.card-container-articles .card-body .card-text {
+  font-size: 14px !important;
+}
+.card-container-articles .card-body a {
+  font-size: 12px;
+  color: var(--buttn);
+  font-weight: bolder;
+}
+
+/* Essential Dog Accessories & Supplies */
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.card-container .card {
+  flex: 0 0 auto;
+  width: 215px; /* Adjust the width as needed */
+  margin-right: 10px; /* Add spacing between cards */
+  margin-bottom: 10px;
+}
+
+/* list cards section */
+.card .card-body li {
+  font-size: 12px;
+  color: black;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.card .card-body li:last-child {
+  margin-bottom: 0; /* Remove the margin for the last item in each column */
+}
+
+.card .card-body li:hover {
+  font-weight: bolder;
+}
+
+/* popular dogs breed section */
+.buttons_scrollbar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.buttons_scrollbar a {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: unset !important;
+  box-shadow: unset !important;
+}
+.custom_column li {
+  margin-bottom: 13px; /* Adjust the margin as needed for your spacing */
+  font-size: 13 !important;
+  font-weight: bolder;
+}
+
+.custom_column li:last-child {
+  margin-bottom: 0; /* Remove the margin for the last item in each column */
+}
+
+footer li {
+  color: white !important;
+  font-size: 12px !important;
+}
+
+.footer_log img {
+  width: 20px !important;
+}
+
+.social_links a {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--buttn);
+  font-size: 25px;
+  border-radius: 100%;
+  text-decoration: none;
+}
+.social_links a:hover {
+  background-color: var(--buttn);
+  color: white;
+}
+.brands ul {
+  list-style: inside;
+}
+.brands ul li {
+  font-weight: bolder;
+  margin-right: 10px !important;
+}
+.brands a {
+  color: #e4a11b;
+}
+.brands a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* page 1 : All pets for sale */
+.bg-color {
+  background: #f5f3f0 !important;
+}
+.bg-color ul li {
+  line-height: 2;
+}
+
+/* Boosted adverts */
+.title {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #493b21;
+}
+.title::before,
+.title::after {
+  content: "";
+  height: 2px;
+  background-color: #b0a082;
+  display: block;
+}
+.letter-spacing1::before {
+  margin-right: -20px;
+}
+.letter-spacing1::after {
+  margin-left: -30px;
+}
+.letter-spacing2::before {
+  margin-right: -50px;
+}
+.letter-spacing2::after {
+  margin-left: -60px;
+}
+
+.user-icon i {
+  background-color: var(--buttn) !important;
+  padding: 15px;
+  border-radius: 100%;
+  color: white;
+}
+
+.location {
+  margin-top: -12px;
+  font-size: 12px;
+}
+.location i {
+  font-size: 13px;
+}
+
+.fav-icon i {
+  background-color: white !important;
+  padding: 10px;
+  border-radius: 100%;
+  color: var(--buttn);
+  font-size: 20px;
+  border: 1px solid rgba(0, 128, 0, 0.237);
+}
+.fav-icon i:hover {
+  border: 1px solid rgb(0, 128, 0);
+}
+.ver-icon span {
+  font-size: 10px;
+  color: rgb(111, 169, 182);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.ver-icon i {
+  font-size: 10px;
+  color: rgb(111, 169, 182);
+}
+
+.boost_font p {
+  font-size: 10px;
+}
+
+.img_border img {
+  height: 100%;
+  width: 100%;
+  border-left: 25px solid #3d382e;
+  border-right: 25px solid #3d382e;
+}
+
+.star-icon {
+  position: absolute;
+  font-size: 20px;
+  background-color: #e4a11b; /* Adjust the icon size as needed */
+  padding: 12px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center;
+  top: 8px; /* Adjust the top value to move the icon up */
+  left: 8px; /* Adjust the left value to move the icon left */
+}
+.camera-icon {
+  position: absolute;
+  font-size: 15px;
+  background-color: rgba(
+    124,
+    120,
+    113,
+    0.76
+  ); /* Adjust the icon size as needed */
+  padding: 5px 10px;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center;
+  bottom: 8px; /* Adjust the bottom value to move the icon down */
+  right: 8px; /* Adjust the right value to move the icon right */
+}
+
+.camera-icon small {
+  font-size: 11px !important;
+}
+
+/* ALL Adverds */
+
+.card_img img {
+  border-left: 25px solid #3d382e;
+  border-right: 25px solid #3d382e;
+}
+
+.sub-img img {
+  border-left: 10px solid #3d382e !important;
+  border-right: 10px solid #3d382e !important;
+}
+
+.camera-icon-all {
+  position: absolute;
+  font-size: 15px;
+  background-color: rgba(
+    124,
+    120,
+    113,
+    0.76
+  ); /* Adjust the icon size as needed */
+  padding: 5px 10px;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center;
+  bottom: 106px; /* Adjust the bottom value to move the icon down */
+  right: 8px; /* Adjust the right value to move the icon right */
+}
+
+/* pagination */
+
+.pagination {
+  background-color: #ffffff !important;
+  padding: 15px;
+}
+.page-link {
+  color: black; /* Set the text color */
+  border-radius: 100%;
+  margin-left: 5px !important;
+  font-size: 10px !important;
+  font-weight: bolder !important;
+}
+
+.page-link:hover {
+  border: var(--buttn) !important;
+}
+
+/* Style for previous and next buttons (optional) */
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+  background: white; /* Set the background for previous and next buttons */
+  color: black;
+  border-radius: 100% !important;
+  /* border: 1px solid green; */
+}
+.page-item:last-child .page-link {
+  border: 1px solid rgba(0, 0, 0, 0.396);
+}
+
+/* All articles */
+.buttons .btn {
+  font-size: 10px !important;
+}
+.col-md-4 .card_tags span {
+  font-size: 10px !important;
+  background-color: #ecf3f2;
+  padding-left: 6px;
+  padding-right: 6px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+.col-md-4 .card-body .card-text {
+  font-size: 14px !important;
+}
+.col-md-4 .card-body a {
+  font-size: 12px;
+  color: var(--buttn);
+  font-weight: bolder;
+}
+
+/* Dog breeds page */
+
+.card-img,
+.card-img-top {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+}
+.card-img,
+.card-img-bottom {
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+}
+
+/* support page */
+
+.hero-section {
+  color: #fff;
+  text-align: center;
+  padding: 150px 0;
+  position: relative;
+  margin-top: 5%;
+}
+
+/* .search-box {
+  max-width: 900px;
+  margin: 0 auto;
+} */
+.has-search .form-control {
+  padding-left: 2.375rem;
+  width: 40rem;
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.support {
+  margin-top: -120px;
+}
+.support-checklists a {
+  text-decoration: none !important;
+  line-height: 2;
+}
+.support-checklists h4 a {
+  color: black;
+  line-height: unset;
+}
+.support-checklists a:hover {
+  text-decoration: underline !important;
+}
+.support-checklists h4 a:hover {
+  color: #0d97f8;
+}
+
+.footer-section {
+  color: #fff;
+  text-align: center;
+  padding: 120px 0;
+  position: relative;
+}
+
+.fixed-help-button {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  z-index: 1000;
+}
+.fixed-help-button a {
+  border-radius: 15px 0 15px !important;
+}
+
+.custom-shape-divider-top-1688468849 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1688468849 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1688468849 .shape-fill {
+  fill: #f5f3f0;
+}
+
+.footer-btn:hover {
+  background-color: rgb(6, 43, 6) !important;
+}
+/* Articles detail page */
+.article_icons .custom_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+
+.article_icons i {
+  font-size: 20px;
+}
+
+.article_tags span {
+  font-size: 10px !important;
+  background-color: #ecf3f2;
+  padding-left: 6px;
+  padding-right: 6px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+.article_date li {
+  font-size: 10px !important;
+}
+
+/* pets detail page */
+.detail-expand-icon {
+  position: absolute;
+  font-size: 25px;
+  /* background-color: rgba(39, 38, 37, 0.76);  */
+  padding: 5px 10px;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center;
+  top: 20px; /* Adjust the bottom value to move the icon down */
+  right: -180px; /* Adjust the right value to move the icon right */
+  z-index: 1;
+}
+.detail-camera-icon {
+  position: absolute;
+  font-size: 15px;
+  background-color: rgba(39, 38, 37, 0.76); /* Adjust the icon size as needed */
+  padding: 5px 10px;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center;
+  bottom: 0; /* Adjust the bottom value to move the icon down */
+  right: -200px; /* Adjust the right value to move the icon right */
+  z-index: 1;
+}
+
+.detail-camera-icon small {
+  font-size: 11px !important;
+}
+
+.carousel-control-next-icon {
+  margin-right: -400px !important;
+}
+.carousel-control-prev-icon {
+  margin-left: -400px !important;
+}
+
+.detail-card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.detail-card-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari, etc.) */
+}
+.detail-card-container .card {
+  flex: 0 0 auto;
+
+  margin-right: 10px; /* Add spacing between cards */
+  margin-bottom: 10px;
+}
+.detail-card-container .card img:hover {
+  border: 1px solid #e4a11b;
+}
+.detail-table table tr td {
+  font-size: 14px !important;
+}
+.detail-table .col-md-4 {
+  border-right: 1px solid rgb(190, 185, 185);
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* For small screens (up to 764x wide) */
+@media (max-width: 764px) {
+  /* slider */
+  .bg-cover {
+    background-position: unset !important;
+    background-size: unset !important;
+  }
+
+  .bg-cover .container {
+    margin-top: unset !important;
+  }
+
+  /* pets categories section */
+
+  .responsive_pets_section {
+    display: flex !important;
+    overflow-x: auto !important;
+  }
+
+  /* footer */
+
+  footer .container {
+    margin-left: 10px;
+  }
+  .brands {
+    display: block !important;
+  }
+  .brands ul {
+    display: block !important;
+    margin-left: -30px;
+  }
+  .social_links {
+    justify-content: start !important;
+    margin-left: 30px !important;
+  }
+
+  /* ALL Adverts */
+  .card_img img {
+    width: 100% !important;
+  }
+  .sub-img span img {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  .camera-icon-all {
+    bottom: 213px; /* Adjust the bottom value to move the icon down */
+  }
+  .card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
