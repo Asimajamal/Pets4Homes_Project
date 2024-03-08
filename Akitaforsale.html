@@ -1,542 +1,2239 @@
-<?php include "incs/header.html";
-?>
-<!-- background image -->
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container-fluid">
-    <div class="row mb-5">
-        <div class="col-12 bg-cover" style="background-image:url('./assets/images/w660_2024559_formhero.webp');">
-            <!--container content -->
-            <div class="row p-md-5 bg-color" style="margin-top: 30% ;margin-bottom: -9px;">
-                <!-- side menu -->
-                <?php include "incs/sidemenu.html" ?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- owl caurosal cdn links for css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/bd03566d29.js" crossorigin="anonymous"></script>
 
-                <!-- main content -->
-                <div class="col-md-9 my-4 col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="d-flex">
-                                <p>
-                                    Home
-                                </p>
-                                <p class="mx-3"> &#x203A;</p>
-                                <p>
-                                    Puppies & Animals for sale
-                                </p>
-                                <p class="mx-3"> &#x203A;</p>
-                                <p>
-                                    Akita Puppies for sale
-                                </p>
-                            </div>
-                            <h3 class="fw-bolder">Puppies for sale</h3>
+    <!-- boottsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- custom css file -->
 
-                            <div class="d-md-flex d-block justify-content-between">
-                                <p>32981 Puppies for sale</p>
-                                <div class="d-md-flex d-block align-items-center">
-                                    <a href="" type="submit" class="btn btn-warning rounded-pill mx-md-2 w-100"><i
-                                            class="fa-regular fa-heart"></i> save search</a>
-                                    <div class="dropdown">
-                                        <button
-                                            class="btn btn-outline-secondary dropdown-toggle btn_shadow mt-md-0 mt-2 w-100"
-                                            type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            Date Published (Newest)
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                            <li><a href="" class="dropdown-item" type="button"> Date Published
-                                                    (Newest)</a></li>
-                                            <li><a href="" class="dropdown-item" type="button"> Date Published
-                                                    (oldest)</a></li>
-                                            <li><a href="" class="dropdown-item" type="button">Price (Lowest)</a>
-                                            </li>
-                                            <li><a href="" class="dropdown-item" type="button">Price (Highest)</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Pets4homes</title>
+</head>
 
-                                </div>
+<body>
 
-                            </div>
-                        </div>
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary fixed-top p-4 mb-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-auto d-flex">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <a class="navbar-brand mx-4 d-none d-md-block" href="#">
+                        <img src="./assets/images/logo.svg" alt="" class="m-0">
+                    </a>
+                    <a class="navbar-brand mx-4 d-block d-md-none" href="#">
+                        <img src="./assets/images/smallLogo.svg" alt="" class="m-0">
+                    </a>
+
+                </div>
+            </div>
+
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a href="index.html" class="text-decoration-none text-dark">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            Pets4Homes
+                        </h5>
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <h5>Pets</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton1">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets for adoption</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton2">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                Pets for stud
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                Wanted pets
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                Breeders
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h5>Accessories & Services</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton3">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets services offered</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton4">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h5>Knowledge hub</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets articles & advice</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton5">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Breed directory</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton6">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h5>Support</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" href="support.html">
+                                Support & safety portal
+                            </a>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <!--1 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas1"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pets for sale</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link fw-bolder" href="Allpetsforsale.html">
+                                All Pets for sale
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Puppies for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton7">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Kittens for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton8">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Other pets for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton9">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--2 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas2"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pets for adoption</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link fw-bolder">
+                                All Pets for adoption
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link ">
+                                Dogs for adoption
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link ">
+                                Cats for adoption
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--3 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas3"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pets accessories for sale</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link fw-bolder">
+                                All Pets accessories for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Dogs accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Cat accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Reptile accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Rabbit accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Livestock accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Poultry accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Bird accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Fish accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Horse accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Small Animal accessories
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--4 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas4"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pets services offered</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link fw-bolder">
+                                All Pets services offered
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Animal Jobs
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Holiday for pets
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Boarding
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Day Care
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Dog Walking
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Grooming / Care
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Horse Share
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Pasture
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Riding Holidays
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Other Services
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--5 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas5"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pet articles & advice</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link fw-bolder" href="Allarticles.html">
+                                All Articles
+                            </a>
+                        </li>
+                        <h5>By Pet</h5>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link " href="birds.html">
+                                Birds
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Cats
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Dogs
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Fish
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Horses
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Invertebrates
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Livestock
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Poultry
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Rabbits
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Reptiles
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Rodents
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                    <hr>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+
+
+                        <h5>By Topic</h5>
+                        <li class="nav-item ">
+                            <a class="nav-link ">
+                                Breeding
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Industry Report
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--6 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas6"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Breed directory</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+
+
+
+                        <li class="nav-item ">
+                            <a class="nav-link " href="dog_breeds.html">
+                                Dog Breed
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Cat Breed
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Rabbit Breed
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--7 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas7"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Most popular puppies for sale</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a href="Allpuppiesforsale.html" class="nav-link fw-bolder">
+                                All puppies for sale
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+
+
+                            <a href="akitaforsale.html" class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulldog for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulley for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Beagle for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--8 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas8"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Most popular kittens for</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link fw-bolder">
+                                All kittens for sale
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulldog for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulley for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Beagle for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--9 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas9"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Other pets for sale</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulldog for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulley for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Beagle for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Navbar right side -->
+            <div class="col-auto d-flex justify-content-center align-items-center">
+                <div>
+                    <i class="fa fa-search fs-5 mx-4 d-md-none d-block"></i>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-envelope fs-md-3 fs-2"></i>
+                </div>
+                <div class="dropdown mx-4 d-flex justify-content-center align-items-center ">
+                    <div class=" mx-md-2" type="button" id="userDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
+
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                    <!-- Down Arrow Icon -->
+                    <i class="fas fa-chevron-down ml-2  d-none d-md-block" data-bs-toggle="dropdown"
+                        aria-expanded="false"></i>
+                </div>
+
+                <a href="" type="submit" class="btn custom_btn rounded-pill d-none d-md-block text-white px-3"> <i
+                        class="fa fa-plus mx-2"></i>New
+                    Advert</a>
+                <a href="" type="submit" class="btn custom_btn rounded-pill d-block d-md-none text-white"> <i
+                        class="fa fa-plus mx-2"></i></a>
+            </div>
+        </div>
+
+    </nav>
+    <!-- background image -->
+
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <div class="col-12 bg-cover" style="background-image:url('./assets/images/w660_2024559_formhero.webp');">
+                <!--container content -->
+                <div class="row p-md-5 bg-color" style="margin-top: 30% ;margin-bottom: -9px;">
+                    <!-- side menu -->
+                    <!-- side menu for pets sale -->
+                    <div class="col-md-3 col-12 my-4">
+                        <div class="container bg-light justify-content-center shadow p-4">
+                            <div class="d-flex justify-content-between ">
+                                <h5 class="fw-bolder">Filters</h5>
+                                <a class="text-success text-decoration-none" type="submit">Clear</a>
+                            </div>
+                            <a href="" class="text-decoration-none text-dark">Back to <span
+                                    class="text-success">Pets</span></a>
                             <div class="my-3">
-                                <span class="text-justify" id="read-more-text">
-                                    The two separate varieties of Akita are a pure Japanese strain, called Akita Inu or
-                                    Akita-ken, and a larger mixed strain, commonly referred to as the American Akita.
-                                    The Akita is known for being an intelligent, bright, yet reserved and possessive
-                                    dog. However, they
-                                </span>
-                                <span class="text-justify collapse" id="extra-text">
-                                    should not be fearful or aggressive, but an Akita should be dignified, courageous
-                                    and affectionate. He defends his family without hesitation, which in short means
-                                    that he is an excellent guard dog. Today, the Akita has become a popular dog breed
-                                    in the UK and elsewhere in the world, and for good reason, because when well
-                                    socialised, he makes a wonderful companion and family dog. The breed originated in
-                                    Japan, where it has always been highly regarded not only for its dignified, proud
-                                    appearance, but also for its loyalty and devotion to its owners.
+                                <ul class="list-unstyled ">
+                                    <li><a class="text-decoration-none text-success " href="">Dogs</a></li>
+                                </ul>
 
-                                    <p>Read our <a href="" class="text-success">Akita Buying Advice</a> page for
-                                        information on this dog breed.</p>
-                                </span><span><a class="text-decoration-none text-success" data-toggle="collapse"
-                                        href="#extra-text" aria-expanded="false" aria-controls="extra-text"
-                                        id="read-more-button">Read More</a></span>
+                                <p class="fw-bolder">Types of Listing</p>
+                                <div>
+                                    <a href="" type="submit" class="btn custom_btn rounded-pill text-white"> For
+                                        sale</a>
+                                </div>
+                                <div>
+                                    <a href="" type="submit" class="btn btn-outline-secondary rounded-pill mt-2">
+                                        For adoption</a>
+                                </div>
+                                <div class="d-flex mt-2">
+                                    <a href="" type="submit" class="btn btn-outline-secondary rounded-pill  ">
+
+                                        For stud</a>
+                                    <a href="" type="submit" class="btn btn-outline-secondary rounded-pill  mx-2">
+
+                                        Wanted</a>
+                                </div>
+
+                                <div class="my-5">
+                                    <div class="my-3">
+                                        <p class="fw-bolder">Breed</p>
+                                        <div class="input-group mb-3 border rounded ">
+                                            <span class="input-group-text border-0 bg-white"><i
+                                                    class="fa-solid fa-search"></i></span>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Filters Breed">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            All Breed
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            All Affenchior
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Afghan Hound
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Akirdale Terrior
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            AKita
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Allfaula Blue Blood
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            All Breed
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            All Breed
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            All Breed
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            All Breed
+                                        </label>
+                                    </div>
+
+
+                                    <div class="mx-4">
+                                        <small class="text-success fw-bold">Load more (275)</small>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <p class="fw-bolder">City / Region</p>
+                                    <div class="input-group mb-3 border rounded ">
+                                        <span class="input-group-text border-0 bg-white"><i
+                                                class="fa-solid fa-location-dot"></i></span>
+                                        <input type="text" class="form-control border-0 shadow-none"
+                                            placeholder="All of UK">
+                                        <span class="input-group-text border-0 bg-white"><i
+                                                class="fa-solid fs-4 fa-location-crosshairs"></i></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <select class="form-select text-muted" disabled id="inputGroupSelect02">
+                                    <option selected>Nationwide</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+
+                            </div>
+                            <p class="fw-bolder">keyword</p>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default"
+                                    placeholder="search (min.3 characters)" />
 
 
                             </div>
-                            <p class="title letter-spacing1 mt-5">BOOSTED ADVERTS</p>
+                            <span id="wordCount" style="display:block; text-align: right; margin-top:-15px">0/100</span>
 
-                        </div>
-                        <div class="col-12">
-                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
-                                <div class="row g-0">
-                                    <div class="col-md-3 p-2 img_border position-relative">
-                                        <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
-                                        <i class="fa-solid fa-star  star-icon "></i>
-                                        <!-- Favorite icon -->
-                                        <i class="fa-solid fa-camera camera-icon"><small class="ms-2">12</small></i>
-                                        <!-- Camera icon -->
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="card-body">
+                            <p class="fw-bolder">Price</p>
+                            <div class="d-flex">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text ">$</span>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                                        placeholder="from">
 
-                                            <div class="d-flex justify-content-between boost_font align-items-center">
-                                                <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
-                                                <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
-                                                    BOOST</p>
-                                            </div>
-                                            <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
-                                            <h6 class="fw-bold">$380
-                                            </h6>
-                                            <div class="d-flex align-items-center">
-                                                <ul class="list-unstyled">
-                                                    <li>Laborador Retriever</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>Age: 6 Weeks</li>
-                                                </ul>
-                                            </div>
-                                            <small class="card-text">This is a wider card with supporting text below as
-                                                a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</small>
-                                            <hr>
-                                            <div class="d-flex justify-content-between align-items-center">
-
-                                                <div class="d-flex">
-                                                    <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
-                                                    <div class="mx-2 ">
-                                                        <p class="ver-icon">Gemnide H. <i
-                                                                class="fa-solid fa-circle-check ms-2 "> </i> <span>ID
-                                                                VERIFIED</span>
-                                                        </p>
-                                                        <p class="location"> <i class="fa-solid fa-location-dot"></i>
-                                                            Chesterfield</p></small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="fav-icon">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
                                 </div>
-                            </a>
-                        </div>
+                                <div class="input-group mb-3 mx-2">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                                        placeholder="to">
 
-                        <div class="col-12">
-                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
-                                <div class="row g-0">
-                                    <div class="col-md-3 p-2 img_border position-relative">
-                                        <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
-                                        <i class="fa-solid fa-star  star-icon "></i>
-                                        <!-- Favorite icon -->
-                                        <i class="fa-solid fa-camera camera-icon"><small class="ms-2">12</small></i>
-                                        <!-- Camera icon -->
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="card-body">
-
-                                            <div class="d-flex justify-content-between boost_font align-items-center">
-                                                <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
-                                                <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
-                                                    BOOST</p>
-                                            </div>
-                                            <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
-                                            <h6 class="fw-bold">$380
-                                            </h6>
-                                            <div class="d-flex align-items-center">
-                                                <ul class="list-unstyled">
-                                                    <li>Laborador Retriever</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>Age: 6 Weeks</li>
-                                                </ul>
-                                            </div>
-                                            <small class="card-text">This is a wider card with supporting text below as
-                                                a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</small>
-                                            <hr>
-                                            <div class="d-flex justify-content-between align-items-center">
-
-                                                <div class="d-flex">
-                                                    <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
-                                                    <div class="mx-2 ">
-                                                        <p class="ver-icon">Gemnide H. <i
-                                                                class="fa-solid fa-circle-check ms-2 "> </i> <span>ID
-                                                                VERIFIED</span>
-                                                        </p>
-                                                        <p class="location"> <i class="fa-solid fa-location-dot"></i>
-                                                            Chesterfield</p></small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="fav-icon">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
                                 </div>
-                            </a>
-                        </div>
-
-                        <div class="col-12">
-                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
-                                <div class="row g-0">
-                                    <div class="col-md-3 p-2 img_border position-relative">
-                                        <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
-                                        <i class="fa-solid fa-star  star-icon "></i>
-                                        <!-- Favorite icon -->
-                                        <i class="fa-solid fa-camera camera-icon"><small class="ms-2">12</small></i>
-                                        <!-- Camera icon -->
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="card-body">
-
-                                            <div class="d-flex justify-content-between boost_font align-items-center">
-                                                <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
-                                                <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
-                                                    BOOST</p>
-                                            </div>
-                                            <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
-                                            <h6 class="fw-bold">$380
-                                            </h6>
-                                            <div class="d-flex align-items-center">
-                                                <ul class="list-unstyled">
-                                                    <li>Laborador Retriever</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>Age: 6 Weeks</li>
-                                                </ul>
-                                            </div>
-                                            <small class="card-text">This is a wider card with supporting text below as
-                                                a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</small>
-                                            <hr>
-                                            <div class="d-flex justify-content-between align-items-center">
-
-                                                <div class="d-flex">
-                                                    <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
-                                                    <div class="mx-2 ">
-                                                        <p class="ver-icon">Gemnide H. <i
-                                                                class="fa-solid fa-circle-check ms-2 "> </i> <span>ID
-                                                                VERIFIED</span>
-                                                        </p>
-                                                        <p class="location"> <i class="fa-solid fa-location-dot"></i>
-                                                            Chesterfield</p></small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="fav-icon">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="my-3">
+                                <p class="fw-bolder">Adviser Safety</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Only ID Verified breeders
+                                    </label>
                                 </div>
-                            </a>
-                        </div>
-
-                        <div class="col-12">
-                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
-                                <div class="row g-0">
-                                    <div class="col-md-3 p-2 img_border position-relative">
-                                        <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
-                                        <i class="fa-solid fa-star  star-icon "></i>
-                                        <!-- Favorite icon -->
-                                        <i class="fa-solid fa-camera camera-icon"><small class="ms-2">12</small></i>
-                                        <!-- Camera icon -->
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="card-body">
-
-                                            <div class="d-flex justify-content-between boost_font align-items-center">
-                                                <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
-                                                <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
-                                                    BOOST</p>
-                                            </div>
-                                            <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
-                                            <h6 class="fw-bold">$380
-                                            </h6>
-                                            <div class="d-flex align-items-center">
-                                                <ul class="list-unstyled">
-                                                    <li>Laborador Retriever</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>Age: 6 Weeks</li>
-                                                </ul>
-                                            </div>
-                                            <small class="card-text">This is a wider card with supporting text below as
-                                                a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</small>
-                                            <hr>
-                                            <div class="d-flex justify-content-between align-items-center">
-
-                                                <div class="d-flex">
-                                                    <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
-                                                    <div class="mx-2 ">
-                                                        <p class="ver-icon">Gemnide H. <i
-                                                                class="fa-solid fa-circle-check ms-2 ">
-                                                            </i> <span>ID
-                                                                VERIFIED</span>
-                                                        </p>
-                                                        <p class="location"> <i class="fa-solid fa-location-dot"></i>
-                                                            Chesterfield</p></small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="fav-icon">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Only KC Assured breeders
+                                    </label>
                                 </div>
-                            </a>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Only KC Assured breeders
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Only KC Assured breeders
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="my-3">
+                                <p class="fw-bolder">Adviser Safety</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        0 - 3 months
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        4 - 12 months
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        1 - 2 years
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        1 - 5 years
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Older than 5 years
+                                    </label>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
 
-                    <!-- ALL ADVERTS -->
-                    <div class="row">
-                        <div class="col-12">
+                    <!-- main content -->
+                    <div class="col-md-9 my-4 col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <p>
+                                        Home
+                                    </p>
+                                    <p class="mx-3"> &#x203A;</p>
+                                    <p>
+                                        Puppies & Animals for sale
+                                    </p>
+                                    <p class="mx-3"> &#x203A;</p>
+                                    <p>
+                                        Akita Puppies for sale
+                                    </p>
+                                </div>
+                                <h3 class="fw-bolder">Puppies for sale</h3>
 
-                            <p class="title letter-spacing2 my-3">ALL ADVERTS</p>
+                                <div class="d-md-flex d-block justify-content-between">
+                                    <p>32981 Puppies for sale</p>
+                                    <div class="d-md-flex d-block align-items-center">
+                                        <a href="" type="submit" class="btn btn-warning rounded-pill mx-md-2 w-100"><i
+                                                class="fa-regular fa-heart"></i> save search</a>
+                                        <div class="dropdown">
+                                            <button
+                                                class="btn btn-outline-secondary dropdown-toggle btn_shadow mt-md-0 mt-2 w-100"
+                                                type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Date Published (Newest)
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                <li><a href="" class="dropdown-item" type="button"> Date Published
+                                                        (Newest)</a></li>
+                                                <li><a href="" class="dropdown-item" type="button"> Date Published
+                                                        (oldest)</a></li>
+                                                <li><a href="" class="dropdown-item" type="button">Price (Lowest)</a>
+                                                </li>
+                                                <li><a href="" class="dropdown-item" type="button">Price (Highest)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
-                                <div class="row g-0">
-                                    <div class="col-md-3 p-2 card_img position-relative">
-                                        <img src="./assets/images/card1.webp" class="img-fluid rounded  " alt="...">
-                                        <!-- Camera icon -->
-                                        <i class="fa-solid fa-camera camera-icon-all"><small class="ms-2">12</small></i>
-                                        <div class="sub-img d-flex align-items-center justify-content-center mt-2">
-                                            <span><img src="./assets/images/card1.webp" class=" rounded" alt=""
-                                                    height="90" width="100"></span>
-                                            <span class="ms-2"><img src="./assets/images/card1.webp" alt="" width="100"
-                                                    height="90" class=" rounded"></span>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="my-3">
+                                    <span class="text-justify" id="read-more-text">
+                                        The two separate varieties of Akita are a pure Japanese strain, called Akita Inu
+                                        or
+                                        Akita-ken, and a larger mixed strain, commonly referred to as the American
+                                        Akita.
+                                        The Akita is known for being an intelligent, bright, yet reserved and possessive
+                                        dog. However, they
+                                    </span>
+                                    <span class="text-justify collapse" id="extra-text">
+                                        should not be fearful or aggressive, but an Akita should be dignified,
+                                        courageous
+                                        and affectionate. He defends his family without hesitation, which in short means
+                                        that he is an excellent guard dog. Today, the Akita has become a popular dog
+                                        breed
+                                        in the UK and elsewhere in the world, and for good reason, because when well
+                                        socialised, he makes a wonderful companion and family dog. The breed originated
+                                        in
+                                        Japan, where it has always been highly regarded not only for its dignified,
+                                        proud
+                                        appearance, but also for its loyalty and devotion to its owners.
+
+                                        <p>Read our <a href="" class="text-success">Akita Buying Advice</a> page for
+                                            information on this dog breed.</p>
+                                    </span><span><a class="text-decoration-none text-success" data-toggle="collapse"
+                                            href="#extra-text" aria-expanded="false" aria-controls="extra-text"
+                                            id="read-more-button">Read More</a></span>
+
+
+                                </div>
+                                <p class="title letter-spacing1 mt-5">BOOSTED ADVERTS</p>
+
+                            </div>
+                            <div class="col-12">
+                                <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
+                                    <div class="row g-0">
+                                        <div class="col-md-3 p-2 img_border position-relative">
+                                            <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
+                                            <i class="fa-solid fa-star  star-icon "></i>
+                                            <!-- Favorite icon -->
+                                            <i class="fa-solid fa-camera camera-icon"><small class="ms-2">12</small></i>
+                                            <!-- Camera icon -->
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+
+                                                <div
+                                                    class="d-flex justify-content-between boost_font align-items-center">
+                                                    <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
+                                                    <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
+                                                        BOOST</p>
+                                                </div>
+                                                <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
+                                                <h6 class="fw-bold">$380
+                                                </h6>
+                                                <div class="d-flex align-items-center">
+                                                    <ul class="list-unstyled">
+                                                        <li>Laborador Retriever</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>Age: 6 Weeks</li>
+                                                    </ul>
+                                                </div>
+                                                <small class="card-text">This is a wider card with supporting text below
+                                                    as
+                                                    a
+                                                    natural lead-in to additional content. This content is a little bit
+                                                    longer.</small>
+                                                <hr>
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <div class="d-flex">
+                                                        <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
+                                                        <div class="mx-2 ">
+                                                            <p class="ver-icon">Gemnide H. <i
+                                                                    class="fa-solid fa-circle-check ms-2 "> </i>
+                                                                <span>ID
+                                                                    VERIFIED</span>
+                                                            </p>
+                                                            <p class="location"> <i
+                                                                    class="fa-solid fa-location-dot"></i>
+                                                                Chesterfield</p></small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="fav-icon">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-9">
-                                        <div class="card-body">
+                                </a>
+                            </div>
 
-                                            <div class="d-flex justify-content-between boost_font align-items-center">
-                                                <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
-                                                <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
-                                                    BOOST</p>
+                            <div class="col-12">
+                                <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
+                                    <div class="row g-0">
+                                        <div class="col-md-3 p-2 img_border position-relative">
+                                            <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
+                                            <i class="fa-solid fa-star  star-icon "></i>
+                                            <!-- Favorite icon -->
+                                            <i class="fa-solid fa-camera camera-icon"><small class="ms-2">12</small></i>
+                                            <!-- Camera icon -->
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+
+                                                <div
+                                                    class="d-flex justify-content-between boost_font align-items-center">
+                                                    <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
+                                                    <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
+                                                        BOOST</p>
+                                                </div>
+                                                <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
+                                                <h6 class="fw-bold">$380
+                                                </h6>
+                                                <div class="d-flex align-items-center">
+                                                    <ul class="list-unstyled">
+                                                        <li>Laborador Retriever</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>Age: 6 Weeks</li>
+                                                    </ul>
+                                                </div>
+                                                <small class="card-text">This is a wider card with supporting text below
+                                                    as
+                                                    a
+                                                    natural lead-in to additional content. This content is a little bit
+                                                    longer.</small>
+                                                <hr>
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <div class="d-flex">
+                                                        <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
+                                                        <div class="mx-2 ">
+                                                            <p class="ver-icon">Gemnide H. <i
+                                                                    class="fa-solid fa-circle-check ms-2 "> </i>
+                                                                <span>ID
+                                                                    VERIFIED</span>
+                                                            </p>
+                                                            <p class="location"> <i
+                                                                    class="fa-solid fa-location-dot"></i>
+                                                                Chesterfield</p></small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="fav-icon">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </div>
+
+                                                </div>
+
                                             </div>
-                                            <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
-                                            <h6 class="fw-bold">$380
-                                            </h6>
-                                            <div class="d-flex align-items-center">
-                                                <ul class="list-unstyled">
-                                                    <li>Laborador Retriever</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>Age: 6 Weeks</li>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
 
-                                                </ul>
-                                                <ul>
-                                                    <li>7 Male / 4 Female</li>
+                            <div class="col-12">
+                                <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
+                                    <div class="row g-0">
+                                        <div class="col-md-3 p-2 img_border position-relative">
+                                            <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
+                                            <i class="fa-solid fa-star  star-icon "></i>
+                                            <!-- Favorite icon -->
+                                            <i class="fa-solid fa-camera camera-icon"><small class="ms-2">12</small></i>
+                                            <!-- Camera icon -->
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
 
-                                                </ul>
+                                                <div
+                                                    class="d-flex justify-content-between boost_font align-items-center">
+                                                    <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
+                                                    <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
+                                                        BOOST</p>
+                                                </div>
+                                                <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
+                                                <h6 class="fw-bold">$380
+                                                </h6>
+                                                <div class="d-flex align-items-center">
+                                                    <ul class="list-unstyled">
+                                                        <li>Laborador Retriever</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>Age: 6 Weeks</li>
+                                                    </ul>
+                                                </div>
+                                                <small class="card-text">This is a wider card with supporting text below
+                                                    as
+                                                    a
+                                                    natural lead-in to additional content. This content is a little bit
+                                                    longer.</small>
+                                                <hr>
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <div class="d-flex">
+                                                        <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
+                                                        <div class="mx-2 ">
+                                                            <p class="ver-icon">Gemnide H. <i
+                                                                    class="fa-solid fa-circle-check ms-2 "> </i>
+                                                                <span>ID
+                                                                    VERIFIED</span>
+                                                            </p>
+                                                            <p class="location"> <i
+                                                                    class="fa-solid fa-location-dot"></i>
+                                                                Chesterfield</p></small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="fav-icon">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </div>
+
+                                                </div>
+
                                             </div>
-                                            <small class="card-text">This is a wider card with supporting text below as
-                                                a
-                                                natural lead-in to additional content. This content is a little bit
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
+                                    <div class="row g-0">
+                                        <div class="col-md-3 p-2 img_border position-relative">
+                                            <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
+                                            <i class="fa-solid fa-star  star-icon "></i>
+                                            <!-- Favorite icon -->
+                                            <i class="fa-solid fa-camera camera-icon"><small class="ms-2">12</small></i>
+                                            <!-- Camera icon -->
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+
+                                                <div
+                                                    class="d-flex justify-content-between boost_font align-items-center">
+                                                    <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
+                                                    <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
+                                                        BOOST</p>
+                                                </div>
+                                                <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
+                                                <h6 class="fw-bold">$380
+                                                </h6>
+                                                <div class="d-flex align-items-center">
+                                                    <ul class="list-unstyled">
+                                                        <li>Laborador Retriever</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>Age: 6 Weeks</li>
+                                                    </ul>
+                                                </div>
+                                                <small class="card-text">This is a wider card with supporting text below
+                                                    as
+                                                    a
+                                                    natural lead-in to additional content. This content is a little bit
+                                                    longer.</small>
+                                                <hr>
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <div class="d-flex">
+                                                        <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
+                                                        <div class="mx-2 ">
+                                                            <p class="ver-icon">Gemnide H. <i
+                                                                    class="fa-solid fa-circle-check ms-2 ">
+                                                                </i> <span>ID
+                                                                    VERIFIED</span>
+                                                            </p>
+                                                            <p class="location"> <i
+                                                                    class="fa-solid fa-location-dot"></i>
+                                                                Chesterfield</p></small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="fav-icon">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- ALL ADVERTS -->
+                        <div class="row">
+                            <div class="col-12">
+
+                                <p class="title letter-spacing2 my-3">ALL ADVERTS</p>
+
+                            </div>
+                            <div class="col-12">
+                                <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
+                                    <div class="row g-0">
+                                        <div class="col-md-3 p-2 card_img position-relative">
+                                            <img src="./assets/images/card1.webp" class="img-fluid rounded  " alt="...">
+                                            <!-- Camera icon -->
+                                            <i class="fa-solid fa-camera camera-icon-all"><small
+                                                    class="ms-2">12</small></i>
+                                            <div class="sub-img d-flex align-items-center justify-content-center mt-2">
+                                                <span><img src="./assets/images/card1.webp" class=" rounded" alt=""
+                                                        height="90" width="100"></span>
+                                                <span class="ms-2"><img src="./assets/images/card1.webp" alt=""
+                                                        width="100" height="90" class=" rounded"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+
+                                                <div
+                                                    class="d-flex justify-content-between boost_font align-items-center">
+                                                    <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
+                                                    <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
+                                                        BOOST</p>
+                                                </div>
+                                                <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
+                                                <h6 class="fw-bold">$380
+                                                </h6>
+                                                <div class="d-flex align-items-center">
+                                                    <ul class="list-unstyled">
+                                                        <li>Laborador Retriever</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>Age: 6 Weeks</li>
+
+                                                    </ul>
+                                                    <ul>
+                                                        <li>7 Male / 4 Female</li>
+
+                                                    </ul>
+                                                </div>
+                                                <small class="card-text">This is a wider card with supporting text below
+                                                    as
+                                                    a
+                                                    natural lead-in to additional content. This content is a little bit
+                                                    natural lead-in to additional content. This content is a little bit
+                                                    longer.</small>
                                                 natural lead-in to additional content. This content is a little bit
                                                 longer.</small>
-                                            natural lead-in to additional content. This content is a little bit
-                                            longer.</small>
 
-                                            <hr>
+                                                <hr>
 
-                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">
 
-                                                <div class="d-flex">
-                                                    <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
-                                                    <div class="mx-2 ">
-                                                        <p class="ver-icon">Gemnide H. <i
-                                                                class="fa-solid fa-circle-check ms-2 "> </i>
-                                                            <span>ID
-                                                                VERIFIED</span>
-                                                        </p>
-                                                        <p class="location"> <i class="fa-solid fa-location-dot"></i>
-                                                            Chesterfield</p></small>
+                                                    <div class="d-flex">
+                                                        <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
+                                                        <div class="mx-2 ">
+                                                            <p class="ver-icon">Gemnide H. <i
+                                                                    class="fa-solid fa-circle-check ms-2 "> </i>
+                                                                <span>ID
+                                                                    VERIFIED</span>
+                                                            </p>
+                                                            <p class="location"> <i
+                                                                    class="fa-solid fa-location-dot"></i>
+                                                                Chesterfield</p></small>
+                                                        </div>
                                                     </div>
+
+                                                    <div class="fav-icon">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </div>
+
                                                 </div>
 
-                                                <div class="fav-icon">
-                                                    <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
+                                    <div class="row g-0">
+                                        <div class="col-md-3 p-2 card_img position-relative">
+                                            <img src="./assets/images/card1.webp" class="img-fluid rounded  " alt="...">
+                                            <!-- Camera icon -->
+                                            <i class="fa-solid fa-camera camera-icon-all"><small
+                                                    class="ms-2">12</small></i>
+                                            <div class="sub-img d-flex align-items-center justify-content-center mt-2">
+                                                <span><img src="./assets/images/card1.webp" class=" rounded" alt=""
+                                                        height="90" width="100"></span>
+                                                <span class="ms-2"><img src="./assets/images/card1.webp" alt=""
+                                                        width="100" height="90" class=" rounded"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+
+                                                <div
+                                                    class="d-flex justify-content-between boost_font align-items-center">
+                                                    <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
+                                                    <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
+                                                        BOOST</p>
                                                 </div>
+                                                <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
+                                                <h6 class="fw-bold">$380
+                                                </h6>
+                                                <div class="d-flex align-items-center">
+                                                    <ul class="list-unstyled">
+                                                        <li>Laborador Retriever</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>Age: 6 Weeks</li>
 
-                                            </div>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>7 Male / 4 Female</li>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12">
-                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
-                                <div class="row g-0">
-                                    <div class="col-md-3 p-2 card_img position-relative">
-                                        <img src="./assets/images/card1.webp" class="img-fluid rounded  " alt="...">
-                                        <!-- Camera icon -->
-                                        <i class="fa-solid fa-camera camera-icon-all"><small class="ms-2">12</small></i>
-                                        <div class="sub-img d-flex align-items-center justify-content-center mt-2">
-                                            <span><img src="./assets/images/card1.webp" class=" rounded" alt=""
-                                                    height="90" width="100"></span>
-                                            <span class="ms-2"><img src="./assets/images/card1.webp" alt="" width="100"
-                                                    height="90" class=" rounded"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="card-body">
-
-                                            <div class="d-flex justify-content-between boost_font align-items-center">
-                                                <p class=""><i class="fa-regular fa-clock"></i> 2 minutes</p>
-                                                <p class="bg-warning rounded px-2"> <i class="fa-solid fa-bolt"></i>
-                                                    BOOST</p>
-                                            </div>
-                                            <h6 class="card-title fw-bold">KC registered Laborador puppies</h6>
-                                            <h6 class="fw-bold">$380
-                                            </h6>
-                                            <div class="d-flex align-items-center">
-                                                <ul class="list-unstyled">
-                                                    <li>Laborador Retriever</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>Age: 6 Weeks</li>
-
-                                                </ul>
-                                                <ul>
-                                                    <li>7 Male / 4 Female</li>
-
-                                                </ul>
-                                            </div>
-                                            <small class="card-text">This is a wider card with supporting text below as
-                                                a
-                                                natural lead-in to additional content. This content is a little bit
+                                                    </ul>
+                                                </div>
+                                                <small class="card-text">This is a wider card with supporting text below
+                                                    as
+                                                    a
+                                                    natural lead-in to additional content. This content is a little bit
+                                                    natural lead-in to additional content. This content is a little bit
+                                                    longer.</small>
                                                 natural lead-in to additional content. This content is a little bit
                                                 longer.</small>
-                                            natural lead-in to additional content. This content is a little bit
-                                            longer.</small>
 
-                                            <hr>
+                                                <hr>
 
-                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex justify-content-between align-items-center">
 
-                                                <div class="d-flex">
-                                                    <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
-                                                    <div class="mx-2 ">
-                                                        <p class="ver-icon">Gemnide H. <i
-                                                                class="fa-solid fa-circle-check ms-2 "> </i>
-                                                            <span>ID
-                                                                VERIFIED</span>
-                                                        </p>
-                                                        <p class="location"> <i class="fa-solid fa-location-dot"></i>
-                                                            Chesterfield</p></small>
+                                                    <div class="d-flex">
+                                                        <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
+                                                        <div class="mx-2 ">
+                                                            <p class="ver-icon">Gemnide H. <i
+                                                                    class="fa-solid fa-circle-check ms-2 "> </i>
+                                                                <span>ID
+                                                                    VERIFIED</span>
+                                                            </p>
+                                                            <p class="location"> <i
+                                                                    class="fa-solid fa-location-dot"></i>
+                                                                Chesterfield</p></small>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <div class="fav-icon">
-                                                    <i class="fa-regular fa-heart"></i>
+                                                    <div class="fav-icon">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </div>
+
                                                 </div>
 
                                             </div>
-
                                         </div>
                                     </div>
+                                </a>
+                            </div>
+
+
+
+                            <div class="container d-flex justify-content-center my-3">
+                                <nav aria-label="Page navigation example ">
+                                    <ul class="pagination rounded-pill">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&#x2039;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link bg-success text-white" href="#">1</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&#x203A;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+
+
+                            <!-- recommended adverts -->
+                            <!-- Recommended Adverts -->
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <p class="title  my-3">Recommended For You</p>
+
                                 </div>
-                            </a>
+                                <div class="row g-4">
+
+
+                                    <div class="col-md-4">
+                                        <div class="card border-0">
+                                            <div class="p-2 card_img_container">
+                                                <img src="./assets/images/image3.webp"
+                                                    class="card-img-top img-fluid h-100" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-title fw-bold">Mixed litter of canvo puppies</p>
+                                                <div class="my-4">
+                                                    <p class="card-text fw-bold" style="margin-bottom: 0;">Cavapo</p>
+                                                    <p style="margin-top: 0;">Boltan</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Rs
+                                                            1,200.</small>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0">
+                                            <div class="p-2 card_img_container">
+                                                <img src="./assets/images/image4.webp" class="card-img-top img-fluid "
+                                                    alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-title fw-bold">Mixed litter of canvo puppies</p>
+                                                <div class="my-4">
+                                                    <p class="card-text fw-bold" style="margin-bottom: 0;">Cavapo</p>
+                                                    <p style="margin-top: 0;">Boltan</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Rs
+                                                            1,200.</small>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0">
+                                            <div class="p-2 card_img_container">
+                                                <img src="./assets/images/image5.webp"
+                                                    class="card-img-top img-fluid h-100" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-title fw-bold">Mixed litter of canvo puppies</p>
+                                                <div class="my-4">
+                                                    <p class="card-text fw-bold" style="margin-bottom: 0;">Cavapo</p>
+                                                    <p style="margin-top: 0;">Boltan</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Rs
+                                                            1,200.</small>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0">
+                                            <div class="p-2 card_img_container">
+                                                <img src="./assets/images/image6.webp" class="card-img-top img-fluid "
+                                                    alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-title fw-bold">Mixed litter of canvo puppies</p>
+                                                <div class="my-4">
+                                                    <p class="card-text fw-bold" style="margin-bottom: 0;">Cavapo</p>
+                                                    <p style="margin-top: 0;">Boltan</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Rs
+                                                            1,200.</small>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0">
+                                            <div class="p-2 card_img_container">
+                                                <img src="./assets/images/image1.webp" class="card-img-top img-fluid "
+                                                    alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-title fw-bold">Mixed litter of canvo puppies</p>
+                                                <div class="my-4">
+                                                    <p class="card-text fw-bold" style="margin-bottom: 0;">Cavapo</p>
+                                                    <p style="margin-top: 0;">Boltan</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Rs
+                                                            1,200.</small>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border-0">
+                                            <div class="p-2 card_img_container">
+                                                <img src="./assets/images/image2.webp" class="card-img-top img-fluid "
+                                                    alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-title fw-bold">Mixed litter of canvo puppies</p>
+                                                <div class="my-4">
+                                                    <p class="card-text fw-bold" style="margin-bottom: 0;">Cavapo</p>
+                                                    <p style="margin-top: 0;">Boltan</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Rs
+                                                            1,200.</small>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container my-3 text-center">
+                                        <a href="" type="submit" class="btn custom_btn text-white">Load more...</a>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+
                         </div>
+                        <!-- Popular Loactions -->
+                        <div class="row my-4">
+                            <div class="col-12">
+                                <div class="container">
+
+                                    <div class="row ">
+                                        <div class="col-12">
+                                            <div class="card border-0">
+
+                                                <div class="card-body">
+
+                                                    <h4 class="card-title fw-bold mb-3 mt-md-0 mt-3">Most popular
+                                                        Locations
+                                                    </h4>
+
+                                                    <div class="row custom_column">
+                                                        <div class="col-md-3">
+                                                            <ul class="list-unstyled">
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <ul class="list-unstyled ">
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <ul class="list-unstyled ">
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <ul class="list-unstyled">
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                                <li><a href=""
+                                                                        class="text-decoration-none text-dark">Border
+                                                                        collie for
+                                                                        sale</a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
 
 
 
-                        <div class="container d-flex justify-content-center my-3">
-                            <nav aria-label="Page navigation example ">
-                                <ul class="pagination rounded-pill">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&#x2039;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link bg-success text-white" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&#x203A;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                                </div>
+
+                            </div>
                         </div>
-
-
-
-                        <!-- recommended adverts -->
-                        <?php include "incs/Recommended_adverts.html" ?>
-
-                    </div>
-                    <?php include "incs/Locations.html"; ?>
-                    < </div>
+                        < </div>
 
 
 
 
 
-                        <?php include "incs/footer.html";
-                        ?>
+                            !-- footer -->
+                            <footer class="custom_bg">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="container">
+                                            <div class="py-4"><img src="./assets/images/logo-white.b80c7814e8.svg"
+                                                    alt="" width="160"></div>
+                                            <div class="row custom_column g-3">
+                                                <div class="col-md-2 col-6">
+                                                    <ul class="list-unstyled">
+                                                        <li>British Shorthair for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
 
-                        <script>
-                            $(document).ready(function () {
-                                $('#read-more-button').click(function () {
-                                    $('#extra-text').toggleClass('show');
-                                    if ($('#extra-text').hasClass('show')) {
-                                        $('#read-more-button').text('Show Less');
-                                    } else {
-                                        $('#read-more-button').text('Read More');
-                                    }
-                                });
-                            });
-                        </script>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2 col-6">
+                                                    <ul class="list-unstyled">
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2 col-6">
+                                                    <ul class="list-unstyled">
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2 col-6">
+                                                    <ul class="list-unstyled">
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2 col-6">
+                                                    <ul class="list-unstyled">
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+                                                        <li>Border collie for sale</li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-2 col-6">
+                                                    <img src="./assets/images/googlePlay.6c99f74e78.svg" alt=""
+                                                        width="150">
+                                                    <img src="./assets/images/appleStore.2928664fe1.svg" alt=""
+                                                        width="150" class="my-3 ">
+                                                    <div class="d-flex social_links justify-content-center">
+                                                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                                        <a href="" class="mx-2"><i
+                                                                class="fa-brands fa-instagram "></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex  align-items-center brands mt-5">
+                                                <p class="fw-bolder text-white">Our brands:</p>
+                                                <ul class="d-flex">
+                                                    <li class="list-unstyled"><a href="">Pets4Homes</a></li>
+                                                    <li><a href="">Hastnet</a></li>
+                                                    <li><a href="">PuppyPlaats</a></li>
+                                                    <li><a href="">iFuna</a></li>
+                                                    <li><a href="">MundoAnimalia</a></li>
+                                                    <li><a href="">Annunci Animali</a></li>
+
+                                                </ul>
+                                            </div>
+                                            <p class="text-white mt-3">Pets4Homes.co.uk use cookies on this site to
+                                                enhance your user
+                                                experience. Use
+                                                of this website
+                                                and other services constitutes acceptance of the Pets4Homes <span><a
+                                                        class="text-warning" href="">Terms of
+                                                        Conditions</a></span> and <span><a href=""
+                                                        class="text-warning">Privacy and
+                                                        Cookie Policy.</a></span> You can <small><a href=""
+                                                        class="text-warning">Manage
+                                                        Preferences</a></small> at
+                                                any time.
+                                            </p>
+                                            <small class="text-white">&copy; copywrite 2023 - Pets4Homes</small>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </footer>
+
+
+
+                            <!-- required links -->
+                            <!-- owl caurosal cdn link for jquery -->
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+                                integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+                                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                            <!-- owl caurosal cdn link for js -->
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+                                integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+                                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                            <!-- owl caurosal file for custome jquery -->
+                            <script src="assets/js/app.js"></script>
+                            <!-- bootrsap cdn link for js -->
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+                                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+                                crossorigin="anonymous">
+                                </script>
+
+
+
+                            <script src="assets/js/script.js"></script>
+
+
+
+</body>
+
+
+
+
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('#read-more-button').click(function () {
+            $('#extra-text').toggleClass('show');
+            if ($('#extra-text').hasClass('show')) {
+                $('#read-more-button').text('Show Less');
+            } else {
+                $('#read-more-button').text('Read More');
+            }
+        });
+    });
+</script>

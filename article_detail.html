@@ -1,196 +1,1333 @@
-<?php
-include "incs/header.html"
-?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- owl caurosal cdn links for css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/bd03566d29.js" crossorigin="anonymous"></script>
 
+    <!-- boottsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- custom css file -->
 
-<div class="row mt-5 mb-5">
-    <div class="col-12">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Pets4homes</title>
+</head>
 
+<body>
 
-        <div class="container mt-5 pt-3">
-            <div class="row mt-5">
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary fixed-top p-4 mb-5">
+        <div class="container">
 
-                <img src="./assets/images/banner_aricle.png" alt="">
+            <div class="row">
+                <div class="col-auto d-flex">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <a class="navbar-brand mx-4 d-none d-md-block" href="#">
+                        <img src="./assets/images/logo.svg" alt="" class="m-0">
+                    </a>
+                    <a class="navbar-brand mx-4 d-block d-md-none" href="#">
+                        <img src="./assets/images/smallLogo.svg" alt="" class="m-0">
+                    </a>
 
-
-
+                </div>
             </div>
 
-            <div class="row mt-5 ">
-                <div class="col-md-9 bg-white p-5 rounded">
-                    <div class="mb-3">
-                        <img src="./assets/images/article.PNG" alt="" class="img-fluid rounded">
 
-                    </div>
-
-                    <div class="row">
-                        <div class="col-2">
-
-                            <div class="d-flex flex-column article_icons">
-                                <a>Share:</a>
-                                <a href="" class="custom_btn text-white py-2 rounded text-decoration-none mt-1"><i
-                                        class="fa-brands fa-facebook"></i></a>
-                                <a href="" class="custom_btn text-white py-2 rounded text-decoration-none mt-2"><i
-                                        class="fa-brands fa-twitter "></i></a>
-
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <h1 class="fw-bold">
-                                A Beginner's Guide to Adopting a Dog
-                            </h1>
-
-                            <div class="article_tags mb-3 my-3 ">
-                                <span class="text-uppercase rounded-pill">Dogs</span> <span
-                                    class="text-uppercase rounded-pill">life
-                                    as a
-                                    parent</span>
-                                <ul class="article_date mt-2">
-                                    <li>15 December 2023</li>
-                                </ul>
-
-
-                            </div>
-                            <p>Adopting a dog is a wonderful thing to do but it's not a decision that should be taken
-                                lightly. We've all seen the stickers “a dog is for life” and no truer words have ever
-                                been written. A dog becomes a valued member of a family, they need the care and
-                                attention they deserve and when they are sick, they need to go to the vet so they get
-                                better as soon as they can. Adopting a dog means being able to offer a loyal, four
-                                legged friend, a caring loving home - for life.
-
-                                Things to Consider Before You Make the Big Decision
-                                It's all too easy to fall in love with a dog that needs rescuing and you may do so with
-                                all the best intentions. However, you really do need to ask yourself a few questions
-                                before you take the plunge and offer a needy dog a caring place in your heart. The list
-                                below consists of a few questions you need to ask yourself before you make the final
-                                decision to dog from a rescue home.
-
-                                Can You Afford To Keep a Dog?
-                                Times are hard, so you need to ask yourself whether you can afford to keep a dog – you
-                                have to think not only about the cost of the good quality food you would need to buy for
-                                them, but there's vets bills and pet insurance to think about too. Then there's the dog
-                                bed, blankets, ID tags, micro-chipping and not forgetting a few toys – all of which are
-                                things you'll need to make sure a dog is healthy, happy and safe.
-
-                                Do You Have Enough Time To Spend With a Dog?
-                                Dogs need lots of love and attention. They need daily exercise and it's never enough to
-                                just let them out in the back garden a couple of times a day. Dogs need physical
-                                exercise but they need mental stimulation too, and depending on the breed, some more
-                                than others!
-
-                                Do You Live in a House or a Flat?
-                                The breed and type of dog you adopt will very much depend on where you live and the type
-                                of house or apartment you live in. Some dogs make great pets to have in a flat whereas
-                                others do not – you would need to think carefully before making the right choice of dog
-                                to suit your living environment.
-
-                                Does Everyone In Your Household Want a Dog?
-                                You need to be sure that everyone in the household is keen to share their home with a
-                                dog. Remember dogs tend to shed fur on furniture, carpets and often come in wet with
-                                muddy paws! You need to be sure the whole family is prepared and willing to spend time
-                                taking care for your new dog, and this means grooming them, exercising them and most of
-                                all loving them!
-
-                                What Needs Doing Before You Bring a Dog Home
-                                The best place to start looking for a rescue dog is on the Internet narrowing your
-                                search to local dog rescue centres so that you don't have to travel too far to collect
-                                them. You can search for dogs for adoption from local rescue centres on our Pets4Homes
-                                site in the dog adoption section. The majority of rescue centres and shelters will ask
-                                you to fill out a form so they can make sure the dog you decide to adopt has the right
-                                temperament to suit your family and home environment.
-
-                                You have to bear in mind that most dogs found in shelters and rescue centres have been
-                                there for a while which means their characters, personalities, and everything to do with
-                                their health has been evaluated by the centre. This helps when it comes to finding the
-                                right home for the right dog. You will also have a visit from a member of staff who will
-                                come to your home to make sure it is a safe place for a rescue dog to be re-homed to.
-                                This is something that has to be done to ensure all dogs go to new and caring homes.
-                                Everyone who wants to adopt a dog from a rescue centre gets a visit so there's nothing
-                                to get upset or worried about.
-
-                                Home Visits Explained
-                                A home visit entails a member of staff from the rescue centre coming round to your home
-                                to make sure it's a safe environment for a dog to live in. The things they'll check
-                                include making sure the fencing around a garden is safe and secure so that a dog can't
-                                escape. Generally speaking, the inspector will check the home environment you are
-                                offering a rescue dog is a nice, caring and loving home.
-
-                                The Things You Need To Get
-                                Before you bring your dog home from the rescue centre, you will need to buy a few things
-                                which includes the following:
-
-                                Dog food – dry and tinned, making sure the food you buy is good quality
-                                Dog bowls – both for food and water
-                                Dog collar and lead
-                                Dog bed – including a blanket or two
-                                Dog ID tag – with name and address on it which you can buy from good pet stores who may
-                                even be able to engrave them for you
-                                Dog cage – for the car when travelling and in the home when training a young dog
-                                Remember, you will need to take the collar and lead with you when you pick your dog up
-                                from the rescue centre and you should put the dog cage in the back of your car, so your
-                                new pet can travel in it on the way home so they are safe and secure.
-
-                                Adopting An Adult Dog
-                                There are many advantages to adopting an older dog, the first being you know exactly
-                                what you are getting when it comes to size and temperament. The downside is you will
-                                never really know about their past. The rescue will know where they came from and will
-                                have got to know the dog, which means they can advise you of the dog's strengths and
-                                weaknesses. The thing you have to bear in mind, is that your new pet will need lots of
-                                time to settle in their new environments and you will need to show them loads of
-                                patience until your new four legged friend understands and fits in to your routine.
-
-                                The All Important First Day Home
-                                Make sure the rescue centre has given you a report explaining the sort of diet and food
-                                your new dog has been eating. The last thing you want to do is give them an upset tummy
-                                by suddenly changing their diet. You need to have a nice quiet home environment when you
-                                bring your dog home. If you have kids, they may be very excited at the fact a new dog is
-                                arriving, but you need to explain to them that staying calm is really important when you
-                                first arrive home with your dog.
-
-                                It's a good idea to keep your new dog on a lead and if you have a garden, take them
-                                outside because the chances are they will need to relieve themselves because of all the
-                                excitement. Once they have settled down, you can let them off their leads and give them
-                                lots of attention but in a nice calm manner.
-
-                                The First Few Weeks – A Period of Adjustment
-                                The first few weeks are important, it's going to be a period of adjustment both for you,
-                                your family and your new rescued dog. It will be perfectly normal for them to feel a
-                                little confused because they won't know what's expected of them in their new home. You
-                                will need to be very patient with your new pet, and you will need to keep reassuring
-                                them that everything is okay, even if there are few accidents!
-
-                                The Things You Should Watch Out For
-                                There may be a few things that you may find a little worrying when you first bring your
-                                dog home, because initially they may be a little shy and show some anxiety as well as
-                                restlessness. They may even drink more water than usual which means they'll need to go
-                                to the toilet more – hence a few “accidents”. Stress may cause them to have a bout of
-                                diarrhoea and they may lose their appetite. However, this is normal because everything
-                                is so new to them, but should the symptoms go on for more than a couple of days, you
-                                will need to contact your vet and take your dog along for a check-up.
-
-                                Settling The Newest Family Member into Their New Home
-                                After a week or so, your newest family member will have made your house their home. They
-                                will have understood your routine and found their feet. However, every dog is different,
-                                some may settle in very quickly whereas others may take a little longer. Sadly, some
-                                dogs never manage to settle at all, but most do and very soon you will not be able to
-                                remember what life was like without them – and the same could be said for a very
-                                grateful rescue dog - sleeping happily in their warm bed, comfortably ensconced in your
-                                home.</p>
-                        </div>
-                    </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a href="index.html" class="text-decoration-none text-dark">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            Pets4Homes
+                        </h5>
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="col-md-3">
+                <hr>
+                <div class="offcanvas-body">
+                    <h5>Pets</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
 
-                    <div class="fixed-image-container">
-                        <img src="./assets/images/articles.png" alt="">
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton1">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets for adoption</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton2">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                Pets for stud
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                Wanted pets
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                Breeders
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h5>Accessories & Services</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton3">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets services offered</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton4">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h5>Knowledge hub</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Pets articles & advice</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton5">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Breed directory</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton6">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h5>Support</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" href="support.html">
+                                Support & safety portal
+                            </a>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <!--1 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas1"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pets for sale</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link fw-bolder" href="Allpetsforsale.html">
+                                All Pets for sale
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Puppies for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton7">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Kittens for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton8">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between align-items-center">
+                            <span class="nav-link">Other pets for sale</span>
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link" id="expandItemsButton9">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--2 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas2"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pets for adoption</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link fw-bolder">
+                                All Pets for adoption
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link ">
+                                Dogs for adoption
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+                            <!--collapse icon trigger the custom JavaScript function -->
+                            <a class="nav-link ">
+                                Cats for adoption
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--3 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas3"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pets accessories for sale</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link fw-bolder">
+                                All Pets accessories for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Dogs accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Cat accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Reptile accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Rabbit accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Livestock accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Poultry accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Bird accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Fish accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Horse accessories
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Small Animal accessories
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--4 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas4"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pets services offered</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link fw-bolder">
+                                All Pets services offered
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Animal Jobs
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Holiday for pets
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Boarding
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Day Care
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Dog Walking
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Grooming / Care
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Horse Share
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Pasture
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Riding Holidays
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Other Services
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--5 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas5"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Pet articles & advice</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link fw-bolder" href="Allarticles.html">
+                                All Articles
+                            </a>
+                        </li>
+                        <h5>By Pet</h5>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link " href="birds.html">
+                                Birds
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Cats
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Dogs
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Fish
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Horses
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Invertebrates
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Livestock
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Poultry
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Rabbits
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Reptiles
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Rodents
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                    <hr>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+
+
+                        <h5>By Topic</h5>
+                        <li class="nav-item ">
+                            <a class="nav-link ">
+                                Breeding
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Industry Report
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--6 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas6"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Breed directory</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+
+
+
+                        <li class="nav-item ">
+                            <a class="nav-link " href="dog_breeds.html">
+                                Dog Breed
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Cat Breed
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Rabbit Breed
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--7 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas7"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Most popular puppies for sale</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a href="Allpuppiesforsale.html" class="nav-link fw-bolder">
+                                All puppies for sale
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+
+
+                            <a href="akitaforsale.html" class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulldog for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulley for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Beagle for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--8 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas8"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Most popular kittens for</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link fw-bolder">
+                                All kittens for sale
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulldog for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulley for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Beagle for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--9 Create a separate offcanvas for nested items -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="nestedItemsCanvas9"
+                aria-labelledby="nestedItemsCanvasLabel">
+                <div class="offcanvas-header">
+
+                    <a data-bs-dismiss="offcanvas" class="text-success nav-link"> <i
+                            class="fa-solid fa-chevron-left me-2"></i>Go Back</a>
+                </div>
+                <hr>
+                <div class="offcanvas-body">
+                    <!-- Nested items go here -->
+                    <h5>Other pets for sale</h5>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 ps-3">
+
+
+
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulldog for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                American Bulley for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Beagle for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+
+
+                            <a class="nav-link ">
+                                Akita for sale
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Navbar right side -->
+            <div class="col-auto d-flex justify-content-center align-items-center">
+                <div>
+                    <i class="fa fa-search fs-5 mx-4 d-md-none d-block"></i>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-envelope fs-md-3 fs-2"></i>
+                </div>
+                <div class="dropdown mx-4 d-flex justify-content-center align-items-center ">
+                    <div class=" mx-md-2" type="button" id="userDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <div class="user-icon"> <i class="fa-solid fa-user"></i></div>
                     </div>
 
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                    <!-- Down Arrow Icon -->
+                    <i class="fas fa-chevron-down ml-2  d-none d-md-block" data-bs-toggle="dropdown"
+                        aria-expanded="false"></i>
+                </div>
+
+                <a href="" type="submit" class="btn custom_btn rounded-pill d-none d-md-block text-white px-3"> <i
+                        class="fa fa-plus mx-2"></i>New
+                    Advert</a>
+                <a href="" type="submit" class="btn custom_btn rounded-pill d-block d-md-none text-white"> <i
+                        class="fa fa-plus mx-2"></i></a>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <div class="row mt-5 mb-5">
+        <div class="col-12">
+
+
+            <div class="container mt-5 pt-3">
+                <div class="row mt-5">
+
+                    <img src="./assets/images/banner_aricle.png" alt="">
+
+
+
+                </div>
+
+                <div class="row mt-5 ">
+                    <div class="col-md-9 bg-white p-5 rounded">
+                        <div class="mb-3">
+                            <img src="./assets/images/article.PNG" alt="" class="img-fluid rounded">
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+
+                                <div class="d-flex flex-column article_icons">
+                                    <a>Share:</a>
+                                    <a href="" class="custom_btn text-white py-2 rounded text-decoration-none mt-1"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                    <a href="" class="custom_btn text-white py-2 rounded text-decoration-none mt-2"><i
+                                            class="fa-brands fa-twitter "></i></a>
+
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                <h1 class="fw-bold">
+                                    A Beginner's Guide to Adopting a Dog
+                                </h1>
+
+                                <div class="article_tags mb-3 my-3 ">
+                                    <span class="text-uppercase rounded-pill">Dogs</span> <span
+                                        class="text-uppercase rounded-pill">life
+                                        as a
+                                        parent</span>
+                                    <ul class="article_date mt-2">
+                                        <li>15 December 2023</li>
+                                    </ul>
+
+
+                                </div>
+                                <p>Adopting a dog is a wonderful thing to do but it's not a decision that should be
+                                    taken
+                                    lightly. We've all seen the stickers “a dog is for life” and no truer words have
+                                    ever
+                                    been written. A dog becomes a valued member of a family, they need the care and
+                                    attention they deserve and when they are sick, they need to go to the vet so they
+                                    get
+                                    better as soon as they can. Adopting a dog means being able to offer a loyal, four
+                                    legged friend, a caring loving home - for life.
+
+                                    Things to Consider Before You Make the Big Decision
+                                    It's all too easy to fall in love with a dog that needs rescuing and you may do so
+                                    with
+                                    all the best intentions. However, you really do need to ask yourself a few questions
+                                    before you take the plunge and offer a needy dog a caring place in your heart. The
+                                    list
+                                    below consists of a few questions you need to ask yourself before you make the final
+                                    decision to dog from a rescue home.
+
+                                    Can You Afford To Keep a Dog?
+                                    Times are hard, so you need to ask yourself whether you can afford to keep a dog –
+                                    you
+                                    have to think not only about the cost of the good quality food you would need to buy
+                                    for
+                                    them, but there's vets bills and pet insurance to think about too. Then there's the
+                                    dog
+                                    bed, blankets, ID tags, micro-chipping and not forgetting a few toys – all of which
+                                    are
+                                    things you'll need to make sure a dog is healthy, happy and safe.
+
+                                    Do You Have Enough Time To Spend With a Dog?
+                                    Dogs need lots of love and attention. They need daily exercise and it's never enough
+                                    to
+                                    just let them out in the back garden a couple of times a day. Dogs need physical
+                                    exercise but they need mental stimulation too, and depending on the breed, some more
+                                    than others!
+
+                                    Do You Live in a House or a Flat?
+                                    The breed and type of dog you adopt will very much depend on where you live and the
+                                    type
+                                    of house or apartment you live in. Some dogs make great pets to have in a flat
+                                    whereas
+                                    others do not – you would need to think carefully before making the right choice of
+                                    dog
+                                    to suit your living environment.
+
+                                    Does Everyone In Your Household Want a Dog?
+                                    You need to be sure that everyone in the household is keen to share their home with
+                                    a
+                                    dog. Remember dogs tend to shed fur on furniture, carpets and often come in wet with
+                                    muddy paws! You need to be sure the whole family is prepared and willing to spend
+                                    time
+                                    taking care for your new dog, and this means grooming them, exercising them and most
+                                    of
+                                    all loving them!
+
+                                    What Needs Doing Before You Bring a Dog Home
+                                    The best place to start looking for a rescue dog is on the Internet narrowing your
+                                    search to local dog rescue centres so that you don't have to travel too far to
+                                    collect
+                                    them. You can search for dogs for adoption from local rescue centres on our
+                                    Pets4Homes
+                                    site in the dog adoption section. The majority of rescue centres and shelters will
+                                    ask
+                                    you to fill out a form so they can make sure the dog you decide to adopt has the
+                                    right
+                                    temperament to suit your family and home environment.
+
+                                    You have to bear in mind that most dogs found in shelters and rescue centres have
+                                    been
+                                    there for a while which means their characters, personalities, and everything to do
+                                    with
+                                    their health has been evaluated by the centre. This helps when it comes to finding
+                                    the
+                                    right home for the right dog. You will also have a visit from a member of staff who
+                                    will
+                                    come to your home to make sure it is a safe place for a rescue dog to be re-homed
+                                    to.
+                                    This is something that has to be done to ensure all dogs go to new and caring homes.
+                                    Everyone who wants to adopt a dog from a rescue centre gets a visit so there's
+                                    nothing
+                                    to get upset or worried about.
+
+                                    Home Visits Explained
+                                    A home visit entails a member of staff from the rescue centre coming round to your
+                                    home
+                                    to make sure it's a safe environment for a dog to live in. The things they'll check
+                                    include making sure the fencing around a garden is safe and secure so that a dog
+                                    can't
+                                    escape. Generally speaking, the inspector will check the home environment you are
+                                    offering a rescue dog is a nice, caring and loving home.
+
+                                    The Things You Need To Get
+                                    Before you bring your dog home from the rescue centre, you will need to buy a few
+                                    things
+                                    which includes the following:
+
+                                    Dog food – dry and tinned, making sure the food you buy is good quality
+                                    Dog bowls – both for food and water
+                                    Dog collar and lead
+                                    Dog bed – including a blanket or two
+                                    Dog ID tag – with name and address on it which you can buy from good pet stores who
+                                    may
+                                    even be able to engrave them for you
+                                    Dog cage – for the car when travelling and in the home when training a young dog
+                                    Remember, you will need to take the collar and lead with you when you pick your dog
+                                    up
+                                    from the rescue centre and you should put the dog cage in the back of your car, so
+                                    your
+                                    new pet can travel in it on the way home so they are safe and secure.
+
+                                    Adopting An Adult Dog
+                                    There are many advantages to adopting an older dog, the first being you know exactly
+                                    what you are getting when it comes to size and temperament. The downside is you will
+                                    never really know about their past. The rescue will know where they came from and
+                                    will
+                                    have got to know the dog, which means they can advise you of the dog's strengths and
+                                    weaknesses. The thing you have to bear in mind, is that your new pet will need lots
+                                    of
+                                    time to settle in their new environments and you will need to show them loads of
+                                    patience until your new four legged friend understands and fits in to your routine.
+
+                                    The All Important First Day Home
+                                    Make sure the rescue centre has given you a report explaining the sort of diet and
+                                    food
+                                    your new dog has been eating. The last thing you want to do is give them an upset
+                                    tummy
+                                    by suddenly changing their diet. You need to have a nice quiet home environment when
+                                    you
+                                    bring your dog home. If you have kids, they may be very excited at the fact a new
+                                    dog is
+                                    arriving, but you need to explain to them that staying calm is really important when
+                                    you
+                                    first arrive home with your dog.
+
+                                    It's a good idea to keep your new dog on a lead and if you have a garden, take them
+                                    outside because the chances are they will need to relieve themselves because of all
+                                    the
+                                    excitement. Once they have settled down, you can let them off their leads and give
+                                    them
+                                    lots of attention but in a nice calm manner.
+
+                                    The First Few Weeks – A Period of Adjustment
+                                    The first few weeks are important, it's going to be a period of adjustment both for
+                                    you,
+                                    your family and your new rescued dog. It will be perfectly normal for them to feel a
+                                    little confused because they won't know what's expected of them in their new home.
+                                    You
+                                    will need to be very patient with your new pet, and you will need to keep reassuring
+                                    them that everything is okay, even if there are few accidents!
+
+                                    The Things You Should Watch Out For
+                                    There may be a few things that you may find a little worrying when you first bring
+                                    your
+                                    dog home, because initially they may be a little shy and show some anxiety as well
+                                    as
+                                    restlessness. They may even drink more water than usual which means they'll need to
+                                    go
+                                    to the toilet more – hence a few “accidents”. Stress may cause them to have a bout
+                                    of
+                                    diarrhoea and they may lose their appetite. However, this is normal because
+                                    everything
+                                    is so new to them, but should the symptoms go on for more than a couple of days, you
+                                    will need to contact your vet and take your dog along for a check-up.
+
+                                    Settling The Newest Family Member into Their New Home
+                                    After a week or so, your newest family member will have made your house their home.
+                                    They
+                                    will have understood your routine and found their feet. However, every dog is
+                                    different,
+                                    some may settle in very quickly whereas others may take a little longer. Sadly, some
+                                    dogs never manage to settle at all, but most do and very soon you will not be able
+                                    to
+                                    remember what life was like without them – and the same could be said for a very
+                                    grateful rescue dog - sleeping happily in their warm bed, comfortably ensconced in
+                                    your
+                                    home.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="fixed-image-container">
+                            <img src="./assets/images/articles.png" alt="">
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<?php
-include "incs/footer.html"
-?>
+    -- footer -->
+    <footer class="custom_bg">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="py-4"><img src="./assets/images/logo-white.b80c7814e8.svg" alt="" width="160"></div>
+                    <div class="row custom_column g-3">
+                        <div class="col-md-2 col-6">
+                            <ul class="list-unstyled">
+                                <li>British Shorthair for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <ul class="list-unstyled">
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <ul class="list-unstyled">
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <ul class="list-unstyled">
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <ul class="list-unstyled">
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+                                <li>Border collie for sale</li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <img src="./assets/images/googlePlay.6c99f74e78.svg" alt="" width="150">
+                            <img src="./assets/images/appleStore.2928664fe1.svg" alt="" width="150" class="my-3 ">
+                            <div class="d-flex social_links justify-content-center">
+                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                <a href="" class="mx-2"><i class="fa-brands fa-instagram "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex  align-items-center brands mt-5">
+                        <p class="fw-bolder text-white">Our brands:</p>
+                        <ul class="d-flex">
+                            <li class="list-unstyled"><a href="">Pets4Homes</a></li>
+                            <li><a href="">Hastnet</a></li>
+                            <li><a href="">PuppyPlaats</a></li>
+                            <li><a href="">iFuna</a></li>
+                            <li><a href="">MundoAnimalia</a></li>
+                            <li><a href="">Annunci Animali</a></li>
+
+                        </ul>
+                    </div>
+                    <p class="text-white mt-3">Pets4Homes.co.uk use cookies on this site to enhance your user
+                        experience. Use
+                        of this website
+                        and other services constitutes acceptance of the Pets4Homes <span><a class="text-warning"
+                                href="">Terms of
+                                Conditions</a></span> and <span><a href="" class="text-warning">Privacy and
+                                Cookie Policy.</a></span> You can <small><a href="" class="text-warning">Manage
+                                Preferences</a></small> at
+                        any time.
+                    </p>
+                    <small class="text-white">&copy; copywrite 2023 - Pets4Homes</small>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- required links -->
+    <!-- owl caurosal cdn link for jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- owl caurosal cdn link for js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- owl caurosal file for custome jquery -->
+    <script src="assets/js/app.js"></script>
+    <!-- bootrsap cdn link for js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+        </script>
+
+
+
+    <script src="assets/js/script.js"></script>
+
+
+
+</body>
+
+
+
+
+
+</html>
