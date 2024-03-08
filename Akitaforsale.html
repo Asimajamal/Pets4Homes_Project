@@ -1,4 +1,4 @@
-<?php include "incs/header.php";
+<?php include "incs/header.html";
 ?>
 <!-- background image -->
 
@@ -8,7 +8,7 @@
             <!--container content -->
             <div class="row p-md-5 bg-color" style="margin-top: 30% ;margin-bottom: -9px;">
                 <!-- side menu -->
-                <?php include "incs/sidemenu.php" ?>
+                <?php include "incs/sidemenu.html" ?>
 
                 <!-- main content -->
                 <div class="col-md-9 my-4 col-12">
@@ -88,7 +88,7 @@
 
                         </div>
                         <div class="col-12">
-                            <a href="pet_details.php" class="card mb-3 text-decoration-none text-dark">
+                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
                                 <div class="row g-0">
                                     <div class="col-md-3 p-2 img_border position-relative">
                                         <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
@@ -148,7 +148,7 @@
                         </div>
 
                         <div class="col-12">
-                            <a href="pet_details.php" class="card mb-3 text-decoration-none text-dark">
+                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
                                 <div class="row g-0">
                                     <div class="col-md-3 p-2 img_border position-relative">
                                         <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
@@ -208,7 +208,7 @@
                         </div>
 
                         <div class="col-12">
-                            <a href="pet_details.php" class="card mb-3 text-decoration-none text-dark">
+                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
                                 <div class="row g-0">
                                     <div class="col-md-3 p-2 img_border position-relative">
                                         <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
@@ -268,7 +268,7 @@
                         </div>
 
                         <div class="col-12">
-                            <a href="pet_details.php" class="card mb-3 text-decoration-none text-dark">
+                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
                                 <div class="row g-0">
                                     <div class="col-md-3 p-2 img_border position-relative">
                                         <img src="./assets/images/card1.webp" class="img-fluid rounded" alt="...">
@@ -338,7 +338,7 @@
 
                         </div>
                         <div class="col-12">
-                            <a href="pet_details.php" class="card mb-3 text-decoration-none text-dark">
+                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
                                 <div class="row g-0">
                                     <div class="col-md-3 p-2 card_img position-relative">
                                         <img src="./assets/images/card1.webp" class="img-fluid rounded  " alt="...">
@@ -412,7 +412,7 @@
                             </a>
                         </div>
                         <div class="col-12">
-                            <a href="pet_details.php" class="card mb-3 text-decoration-none text-dark">
+                            <a href="pet_details.html" class="card mb-3 text-decoration-none text-dark">
                                 <div class="row g-0">
                                     <div class="col-md-3 p-2 card_img position-relative">
                                         <img src="./assets/images/card1.webp" class="img-fluid rounded  " alt="...">
@@ -515,28 +515,28 @@
 
 
                         <!-- recommended adverts -->
-                        <?php include "incs/Recommended_adverts.php" ?>
+                        <?php include "incs/Recommended_adverts.html" ?>
 
                     </div>
-                    <?php include "incs/Locations.php"; ?>
+                    <?php include "incs/Locations.html"; ?>
                     < </div>
 
 
 
 
 
-                        <?php include "incs/footer.php";
-    ?>
+                        <?php include "incs/footer.html";
+                        ?>
 
                         <script>
-                        $(document).ready(function() {
-                            $('#read-more-button').click(function() {
-                                $('#extra-text').toggleClass('show');
-                                if ($('#extra-text').hasClass('show')) {
-                                    $('#read-more-button').text('Show Less');
-                                } else {
-                                    $('#read-more-button').text('Read More');
-                                }
+                            $(document).ready(function () {
+                                $('#read-more-button').click(function () {
+                                    $('#extra-text').toggleClass('show');
+                                    if ($('#extra-text').hasClass('show')) {
+                                        $('#read-more-button').text('Show Less');
+                                    } else {
+                                        $('#read-more-button').text('Read More');
+                                    }
+                                });
                             });
-                        });
                         </script>
